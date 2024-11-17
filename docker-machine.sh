@@ -1,11 +1,11 @@
 #!/bin/bash
 
-HOSTED_ZONE_ID="Z08801502JQFVUXR02K9R"  
-RECORD_NAME="docker.konkas.tech"   
+HOSTED_ZONE_ID="Z05490243D9B1YZ4TQUM"  
+RECORD_NAME="docker.bapatlas.site"  
 
 AMI_ID=$(aws ec2 describe-images \
     --owners "amazon" \
-    --region ap-south-1 \
+    --region us-east-1 \
     --filters "Name=name,Values=al2023-ami-2023*" "Name=state,Values=available" \
     --query "Images | sort_by(@, &CreationDate)[-1].ImageId" \
     --output text)
