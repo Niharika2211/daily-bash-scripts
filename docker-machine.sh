@@ -18,7 +18,7 @@ fi
 INSTANCE_ID=$(aws ec2 run-instances \
   --image-id "$AMI_ID" \
   --instance-type t3a.medium \
-  --key-name dev \
+  --key-name Nvrgnia \
   --user-data file://docker-installation.sh \
   --instance-market-options "MarketType=spot,SpotOptions={SpotInstanceType=one-time}" \
   --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=docker}]' \
